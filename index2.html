@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Cube - Mouse Drag to Rotate</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        let scene, camera, renderer, cube;
+        let isDragging = false;
+        let previousMousePosition = { x: 0, y: 0 };
+
+        // Initialize the scene
+        function init() {
+            scene = new THREE.Scene();
+
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 5;
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            // Create the cube
+            const geometry = new THREE.BoxGeometry();
+            const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
+            cube = new THREE.Mesh(geometry, material);
+            scene.add(cube);
+
+            animate();
+        }
+
+        // Handle mouse down event
+        window.addEventListener('mousedown', function (event) {
+            isDragging = true;
+        });
+
+        // Handle mouse up event
+        window.addEventListener('mouseup', function (event) {
+            isDragging = false;
+        });
+
+        // Handle mouse move event
+        window.addEventListener('mousemove', function (event) {
+            if (isDragging) {
+                const deltaMove = {
+                    x: event.clientX - previousMousePosition.x,
+                    y: event.clientY - previousMousePosition.y
+                };
+
+                const deltaRotationQuaternion = new THREE.Quaternion()
+                    .setFromEuler(new THREE.Euler(
+                        toRadians(deltaMove.y * 0.5), // Rotate on X-axis (vertical mouse movement)
+                        toRadians(deltaMove.x * 0.5), // Rotate on Y-axis (horizontal mouse movement)
+                        0,
+                        'XYZ'
+                    ));
+
+                cube.quaternion.multiplyQuaternions(deltaRotationQuaternion, cube.quaternion);
+
+                previousMousePosition = {
+                    x: event.clientX,
+                    y: event.clientY
+                };
+            }
+        });
+
+        // Helper function to convert degrees to radians
+        function toRadians(angle) {
+            return angle * (Math.PI / 180);
+        }
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+             // Rotate the cube
+             cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+
+        // Adjust camera and renderer size when the window is resized
+        window.addEventListener('resize', () => {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        });
+
+        init();
+    </script>
+</body>
+</html>

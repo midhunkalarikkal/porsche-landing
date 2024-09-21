@@ -1,41 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:weight@200;400;700&display=swap');
-body{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+}
+
+/* Body Styling */
+body {
     background-color: hsl(0, 0%, 100%);
     color: #000000;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     padding: 0;
     margin: 0;
 }
 
-section{
-    min-height: 101vh;
+
+/* Font Faces */
+@font-face {
+    font-family: 'Porsche911Regular';
+    src: url('/fonts/911v2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.leftToRight{
+@font-face {
+    font-family: 'Porsche911Bold';
+    src: url('/fonts/911v2b.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Porsche911Condensed';
+    src: url('/fonts/911v2c.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Porsche911Italic';
+    src: url('/fonts/911v2i.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Porsche911Light';
+    src: url('/fonts/911v2l.ttf') format('truetype');
+    font-weight: 300; /* Light weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Porsche911LightItalic';
+    src: url('/fonts/911v2li.ttf') format('truetype');
+    font-weight: 300; /* Light weight */
+    font-style: italic;
+}
+
+/* Text font */
+.main-title{
+    font-family: 'Porsche911Regular', sans-serif;
+}
+
+
+/* Section Styling */
+section {
+    min-height: 100vh;
+}
+
+/* First Section */
+.first {
+    height: 100vh;
+}
+
+/* X axis movement */
+.xMovement {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
 }
 
-.hidden{
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-}
-
-.show{
+.xAxisShow {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
 }
+/* X axis movement */
 
-.first{
-    height: 100vh;
+/* X axis movement */
+.yMovement {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-30%);
 }
 
+.yAxisShow {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+/* X axis movement */
+
+/* Optionally control the maximum size of the image */
+.main-logo {
+    max-width: 30%;
+    height: auto; 
+}
+
+
+/* Media Query */
 @media (prefers-reduced-motion: no-preference) {
-    .hidden , .leftToRight{
-      transition: all 2s;
+    .xMovement, .yMovement {
+        transition: all 2s;
     }
-  }
+}
 

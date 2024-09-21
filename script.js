@@ -1,21 +1,33 @@
-const observer = new IntersectionObserver((entries)=>{
+const xObserver = new IntersectionObserver((entries)=>{
     entries.forEach((entry)=>{
         console.log(entry)
         if(entry.isIntersecting){
-            entry.target.classList.add('show')
+            entry.target.classList.add('xAxisShow')
         }else{
-            entry.target.classList.remove('show')
+            entry.target.classList.remove('xAxisShow')
         }
     })
 })
 
-const hiddenElements = document.querySelectorAll('.hidden')
-
-hiddenElements.forEach((el)=>{
-    observer.observe(el)
+const yObserver = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('yAxisShow')
+        }else{
+            entry.target.classList.remove('yAxisShow')
+        }
+    })
 })
 
-const leftToRightElements = document.querySelectorAll('.leftToRight')
-leftToRightElements.forEach((el)=>{
-    observer.observe(el)
+
+
+const xAxisMovingElement = document.querySelectorAll('.xMovement')
+xAxisMovingElement.forEach((el)=>{
+    xObserver.observe(el)
+})
+
+const yAxisMovingElement = document.querySelectorAll('.yMovement')
+yAxisMovingElement.forEach((el)=>{
+    yObserver.observe(el)
 })

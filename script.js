@@ -10,6 +10,12 @@ const observer = new IntersectionObserver((entries)=>{
 })
 
 const hiddenElements = document.querySelectorAll('.hidden')
+
 hiddenElements.forEach((el)=>{
+    observer.observe(el)
+})
+
+const leftToRightElements = document.querySelectorAll('.leftToRight')
+leftToRightElements.forEach((el)=>{
     observer.observe(el)
 })

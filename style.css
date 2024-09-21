@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:weight@200;400;700&display=swap');
 body{
-    background-color: #131316;
-    color: #ffffff;
+    background-color: hsl(0, 0%, 100%);
+    color: #000000;
     font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
 }
 
 section{
-    display: grid;
-    place-items: center;
-    align-content: center;
     min-height: 101vh;
+}
+
+.leftToRight{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
 }
 
 .hidden{
@@ -26,8 +29,13 @@ section{
     transform: translateX(0);
 }
 
+.first{
+    height: 100vh;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-    .hidden {
+    .hidden , .leftToRight{
       transition: all 2s;
     }
   }
+

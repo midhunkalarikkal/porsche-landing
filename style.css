@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 .roboto-thin {
     font-family: "Roboto", sans-serif;
@@ -29,6 +30,13 @@
     font-family: "Roboto", sans-serif;
     font-weight: 900;
 }
+
+.audiowide-regular {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 /* Body Styling */
 body {
@@ -89,17 +97,51 @@ body {
     font-family: 'Porsche911Regular', sans-serif;
 }
 
-
 /* Section Styling */
-section {
+.first-section {
     min-height: 100vh;
 }
 
-/* First Section */
-.first {
-    height: 100vh;
+/* First section start */
+.main-logo {
+    max-width: 30%;
+    height: auto; 
+}
+/* First section wnd */
+
+/* Second section start*/
+.second {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #000000 30%, #434343);
+    border-radius: 15px;
 }
 
+.car-image {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.car-image:hover {
+    transform: scale(1.05); /* Zoom-in effect on hover */
+}
+
+.head-two{
+    font-family: 'Russo One', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.para{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+/* Second section end*/
+
+/* Movement */
 /* X axis movement */
 .xMovement {
     opacity: 0;
@@ -128,17 +170,30 @@ section {
 }
 /* X axis movement */
 
-/* Optionally control the maximum size of the image */
-.main-logo {
-    max-width: 30%;
-    height: auto; 
-}
-
-
 /* Media Query */
 @media (prefers-reduced-motion: no-preference) {
     .xMovement, .yMovement {
         transition: all 2s;
     }
 }
+/* Movement */
 
+.tile {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+
+  

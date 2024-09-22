@@ -139,19 +139,45 @@ section{
 /* Second section start */
 .tile {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 12px; 
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tile:hover {
+.tilehover:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2); 
 }
 
 .img-fluid {
     width: 100%;
     height: auto;
+    border-radius: 12px; 
 }
+
+.second-title {
+    font-family: 'Porsche Next', sans-serif; 
+    font-size: 1.5rem; 
+    color: #333; 
+}
+
+blockquote {
+    font-style: italic; 
+    margin: 0; 
+    padding: 0.5rem 1rem; 
+    background: rgba(0, 0, 0, 0.02); 
+    border-left: 4px solid #C7203D; 
+}
+
+.mid-tile {
+    opacity: 0;
+    transition: opacity 1s ease 1s; 
+}
+
+.mid-tileshow {
+    opacity: 1;
+}
+
 /* Second section end */
 
 /* Third section start*/

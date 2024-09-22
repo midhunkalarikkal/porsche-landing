@@ -31,6 +31,17 @@ const xReverseObserver = new IntersectionObserver((entries)=>{
     })
 })
 
+const midTileObserver = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('mid-tileshow')
+        }else{
+            entry.target.classList.remove('mid-tileshow')
+        }
+    })
+})
+
 
 
 const xAxisMovingElement = document.querySelectorAll('.xMovement')
@@ -46,4 +57,9 @@ yAxisMovingElement.forEach((el)=>{
 const xAxisReverseMovingElement = document.querySelectorAll('.xReverseMovement')
 xAxisReverseMovingElement.forEach((el)=>{
     xReverseObserver.observe(el)
+})
+
+const midTileElement = document.querySelectorAll('.mid-tile')
+midTileElement.forEach((el)=>{
+    midTileObserver.observe(el)
 })

@@ -95,6 +95,9 @@ body {
 /* Text font */
 .main-title{
     font-family: 'Porsche911Regular', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 5px;
 }
 
 /* Section Styling */
@@ -102,15 +105,57 @@ section{
     min-height: 100vh;
 }
 
+/* Navbar styles start */
+.navbar {
+    background: transparent;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    color: #fff;
+}
+/* Navbar styles end */
+
 /* First section start */
 .main-logo {
-    max-width: 30%;
-    height: auto; 
+    height: auto;
 }
 /* First section wnd */
 
-/* Second section start*/
-.second {
+/* Second section start */
+.tile {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+/* Second section end */
+
+/* Third section start*/
+.Third {
     padding: 60px 0;
     background: linear-gradient(135deg, #000000 30%, #434343);
     border-radius: 15px;
@@ -139,7 +184,7 @@ section{
     font-weight: 300;
     margin-bottom: 30px;
 }
-/* Second section end*/
+/* Third section end*/
 
 /* Movement */
 /* X axis movement */
@@ -170,19 +215,19 @@ section{
 }
 /* X axis reverse movement */
 
-/* X axis movement */
+/* Y axis movement */
 .yMovement {
     opacity: 0;
     filter: blur(5px);
-    transform: translateY(-30%);
+    transform: translateY(-100%);
 }
 
 .yAxisShow {
     opacity: 1;
     filter: blur(0);
-    transform: translateY(0);
+    transform: translateY(-30%);
 }
-/* X axis movement */
+/* Y axis movement */
 
 /* Media Query */
 @media (prefers-reduced-motion: no-preference) {
@@ -192,21 +237,43 @@ section{
 }
 /* Movement */
 
-.tile {
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+@media (max-width: 767px) {
+    .main-logo{
+        width: 40%;
+    }
+    
+    .main-title{
+        font-size: 1.5rem;
+    }
 }
 
-.tile:hover {
-    transform: scale(1.05);
+@media (min-width: 768px) {
+    .main-logo{
+        width: 35%;
+    }
+    
+    .main-title{
+        font-size: 1.5rem;
+    }
 }
 
-.img-fluid {
-    width: 100%;
-    height: auto;
+@media (min-width: 992px) {
+    .main-logo{
+        width: 30%;
+    }
+    
+    .main-title{
+        font-size: 2rem;
+    }
 }
 
+@media (min-width: 1200px) {
+    .main-logo{
+        width: 20%;
+    }
+    
+    .main-title{
+        font-size: 2.5rem;
+    }
+}
 
-  

@@ -9,14 +9,46 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <section class="first-section">
+    <!-- <section class="first-section">
         <div class="p-3 d-flex align-items-center justify-content-center">
             <h1 class="text-center main-title">PORSCHE</h1>
         </div>        
         <div class="first d-flex align-items-center justify-content-center yMovement">
-            <img src="/images/porscheLogo.png" alt="No image" class="mb-5 main-logo img-fluid">
+            <img src="/images/porscheLogo.png" alt="No image" class="mb-5 main-logo">
         </div>        
+    </section> -->
+    <nav class="navbar navbar-expand-md navbar-light p-3">
+        <div class="container">
+            <div class="main-head col-12 d-flex align-items-center justify-content-center d-none d-md-flex">
+                <a class="navbar-brand main-title" href="#">PORSCHE</a>
+            </div>      
+            <a class="navbar-brand text-center main-title d-md-none" href="#">PORSCHE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto d-md-none">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="d-flex align-items-center justify-content-center">
+        <img src="/images/porscheLogo.png" alt="No image" class="main-logo img-fluid yMovement">
     </section>
+    
     <section>
         <div class="m-1 p-2 d-flex flex-wrap">
             <div class="col-md-4 p-2 tile">
@@ -45,7 +77,7 @@
         </div>        
     </section>
     <section>
-        <div class="second m-5 p-4 text-light rounded d-flex flex-lg-row flex-column">
+        <div class="Third m-5 p-4 text-light rounded d-flex flex-lg-row flex-column">
             <div class="left xMovement">
                 <img src="/images/image2.png" alt="Porsche Car" class="car-image img-fluid rounded">
             </div>

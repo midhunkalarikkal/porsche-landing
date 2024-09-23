@@ -189,6 +189,10 @@ section {
     opacity: 1;
 }
 
+.model-name{
+    font-family: 'roboto-light', sans-serif;
+}
+
 /* Second section end */
 
 /* Third section start*/
@@ -196,6 +200,8 @@ section {
     padding: 60px 0;
     background: linear-gradient(135deg, #000000 30%, #434343);
     border-radius: 15px;
+    position: relative;
+    overflow: hidden;
 }
 
 .car-image {
@@ -208,20 +214,35 @@ section {
     transform: scale(1.05);
 }
 
-.head-two {
-    font-family: 'Russo One', sans-serif;
-    font-size: 3rem;
+.third-h2 {
+    font-family: 'Porsche911Italic', sans-serif;
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
 
-.para {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 30px;
+.third-h4{
+    font-family: 'roboto-thin', sans-serif;
 }
 
+@media (min-width: 992px){
+    .Third::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff; 
+        clip-path: polygon(0 0, 40% 60%, 0 100%);
+        z-index: 1; 
+    }
+    
+    .left,
+    .right {
+        position: relative; 
+        z-index: 2; 
+    }
+}
 /* Third section end*/
 
 /* Movement */
@@ -292,16 +313,24 @@ section {
         font-size: 1.3rem;
     }
 
+    h2{
+        font-size: 1.8rem;
+    }
+
     h3 {
         font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
     }
     
     p {
         font-size: 0.7rem;
     }
-    
-    h4 {
-        font-size: 1.2rem;
+
+    .second-section-second-title{
+        text-align: center;
     }
 }
 
@@ -314,16 +343,21 @@ section {
     .main-title {
         font-size: 1.5rem;
     }
+
+    h2{
+        font-size: 2rem;
+    }
+
     h3 {
         font-size: 1.6rem;
+    }
+
+    h4 {
+        font-size: 1.4rem;
     }
     
     p {
         font-size: 0.8rem;
-    }
-    
-    h4 {
-        font-size: 1.4rem;
     }
 }
 
@@ -337,16 +371,20 @@ section {
         font-size: 2rem;
     }
 
+    h2{
+        font-size: 2.2rem;
+    }
+
     h3 {
         font-size: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1.6rem;
     }
     
     p {
         font-size: 0.9rem;
-    }
-    
-    h4 {
-        font-size: 1.8rem;
     }
 }
 
@@ -360,15 +398,20 @@ section {
         font-size: 2.5rem;
     }
 
+    h2{
+        font-size: 2.4rem;
+    }
+
     h3 {
         font-size: 2rem;
     }
     
+    h4 {
+        font-size: 1.6rem;
+    }
+
     p {
         font-size: 1rem;
     }
-    
-    h4 {
-        font-size: 2rem;
-    }
 }
+

@@ -36,8 +36,8 @@
     font-family: "Audiowide", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
+}
+
 /* Porsche font */
 @font-face {
     font-family: 'Porsche911Regular';
@@ -70,18 +70,18 @@
 @font-face {
     font-family: 'Porsche911Light';
     src: url('/fonts/911v2l.ttf') format('truetype');
-    font-weight: 300; 
+    font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Porsche911LightItalic';
     src: url('/fonts/911v2li.ttf') format('truetype');
-    font-weight: 300; 
+    font-weight: 300;
     font-style: italic;
 }
 
-  /* Body Styling */
+/* Body Styling */
 body {
     background-color: hsl(0, 0%, 100%);
     color: #000000;
@@ -92,28 +92,32 @@ body {
 }
 
 /* Prevent horizontal scrolling */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-  }
-  
-  /* Ensure all sections are within the viewport */
-  .container, .wrapper, .section {
+}
+
+/* Ensure all sections are within the viewport */
+.container,
+.wrapper,
+.section {
     max-width: 100vw;
     box-sizing: border-box;
-  }
+}
 
-/* Text font */
-.main-title{
+/* Text font start */
+.main-title {
     font-family: 'Porsche911Regular', sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: 5px;
 }
+/* Text font end */
 
 /* Section Styling */
-section{
+section {
     min-height: 100vh;
 }
 
@@ -140,51 +144,45 @@ section{
 .navbar-toggler-icon {
     color: #fff;
 }
+
 /* Navbar styles end */
 
 /* First section start */
 .main-logo {
     height: auto;
 }
+
 /* First section wnd */
 
 /* Second section start */
 .tile {
     background: #fff;
-    border-radius: 12px; 
+    border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tilehover:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
 }
 
 .img-fluid {
     width: 100%;
     height: auto;
-    border-radius: 12px; 
+    border-radius: 12px;
 }
 
 .second-title {
     font-family: "Racing Sans One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #333; 
-}
-
-blockquote {
-    font-style: italic; 
-    margin: 0; 
-    padding: 0.5rem 1rem; 
-    background: rgba(0, 0, 0, 0.02); 
-    border-left: 4px solid #C7203D; 
+    color: #333;
 }
 
 .mid-tile {
     opacity: 0;
-    transition: opacity 1s ease 1s; 
+    transition: opacity 1s ease 1s;
 }
 
 .mid-tileshow {
@@ -207,22 +205,23 @@ blockquote {
 }
 
 .car-image:hover {
-    transform: scale(1.05); /* Zoom-in effect on hover */
+    transform: scale(1.05);
 }
 
-.head-two{
+.head-two {
     font-family: 'Russo One', sans-serif;
     font-size: 3rem;
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
 
-.para{
+.para {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 30px;
 }
+
 /* Third section end*/
 
 /* Movement */
@@ -238,6 +237,7 @@ blockquote {
     filter: blur(0);
     transform: translateX(0);
 }
+
 /* X axis movement */
 
 /* X axis reverse movement */
@@ -252,6 +252,7 @@ blockquote {
     filter: blur(0);
     transform: translateX(0);
 }
+
 /* X axis reverse movement */
 
 /* Y axis movement */
@@ -266,14 +267,19 @@ blockquote {
     filter: blur(0);
     transform: translateY(-30%);
 }
+
 /* Y axis movement */
 
 /* Media Query */
 @media (prefers-reduced-motion: no-preference) {
-    .xMovement, .yMovement , .xReverseMovement{
+
+    .xMovement,
+    .yMovement,
+    .xReverseMovement {
         transition: all 2s;
     }
 }
+
 /* Movement */
 
 /* For mobile screens (max-width: 767px) */
@@ -286,32 +292,16 @@ blockquote {
         font-size: 1.3rem;
     }
 
-    h1 {
-        font-size: 1.3rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
     h3 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
-
-    h4 {
-        font-size: 1rem;
-    }
-
-    h5 {
-        font-size: 0.9rem;
-    }
-
-    h6 {
-        font-size: 0.7rem;
-    }
-
+    
     p {
         font-size: 0.7rem;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
     }
 }
 
@@ -324,33 +314,16 @@ blockquote {
     .main-title {
         font-size: 1.5rem;
     }
-
-    h1 {
-        font-size: 1.7rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
     h3 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
-
-    h4 {
-        font-size: 1.4rem;
-    }
-
-    h5 {
-        font-size: 1.2rem;
-    }
-
-    h6 {
-        font-size: 0.9rem;
-    }
-
+    
     p {
         font-size: 0.8rem;
+    }
+    
+    h4 {
+        font-size: 1.4rem;
     }
 }
 
@@ -364,32 +337,16 @@ blockquote {
         font-size: 2rem;
     }
 
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
     h3 {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
-
-    h4 {
-        font-size: 1.5rem;
-    }
-
-    h5 {
-        font-size: 1.4rem;
-    }
-
-    h6 {
-        font-size: 1.2rem;
-    }
-
+    
     p {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    h4 {
+        font-size: 1.8rem;
     }
 }
 
@@ -403,31 +360,15 @@ blockquote {
         font-size: 2.5rem;
     }
 
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 2.2rem;
-    }
-
     h3 {
         font-size: 2rem;
     }
-
-    h4 {
-        font-size: 1.8rem;
-    }
-
-    h5 {
-        font-size: 1.6rem;
-    }
-
-    h6 {
-        font-size: 1.4rem;
-    }
-
+    
     p {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+    
+    h4 {
+        font-size: 2rem;
     }
 }

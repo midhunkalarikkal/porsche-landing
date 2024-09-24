@@ -162,6 +162,37 @@ section {
     height: auto;
 }
 
+.first-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    background-image: url('https://www.wsupercars.com/wallpapers-regular/Porsche/2025-Porsche-911-Targa-4-GTS-002-1080.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.first-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black shade with opacity */
+    z-index: 1;
+}
+
+.main-logo {
+    position: relative;
+    z-index: 2; /* Ensure the logo is above the background and the black shade */
+    max-width: 300px; /* Adjust size as needed */
+}
+
+
 /* First section wnd */
 
 /* Second section start */

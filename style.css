@@ -89,6 +89,13 @@ body {
     font-weight: 400;
     padding: 0;
     margin: 0;
+    overflow: hidden;
+    overflow-y: scroll; 
+    scrollbar-width: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none; 
 }
 
 /* Prevent horizontal scrolling */
@@ -128,7 +135,7 @@ body {
 
 /* Section Styling */
 section {
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 /* Navbar styles start */
@@ -165,7 +172,7 @@ section {
 .first-section {
     position: relative;
     width: 100%;
-    height: 100vh; /* Adjust height as needed */
+    height: 100dvh; /* Adjust height as needed */
     background-image: url('https://www.wsupercars.com/wallpapers-regular/Porsche/2025-Porsche-911-Targa-4-GTS-002-1080.jpg');
     background-size: cover;
     background-position: center;
@@ -352,7 +359,7 @@ section {
         height: 100%;
         background: #ffffff; 
         clip-path: polygon(0 0, 40% 60%, 0 100%);
-        z-index: 1; 
+        z-index: 1;
     }
     
     .left,
@@ -378,6 +385,17 @@ section {
 }
 
 /* X axis movement */
+
+/* X axis movement for xMovementForLastCar */
+.xMovementForLastCar {
+    transform: translateX(-30%);
+}
+
+.xMovementForLastCarShow {
+    transform: translateX(100%);
+}
+
+/* X axis movement for xMovementForLastCar*/
 
 /* X axis reverse movement */
 .xReverseMovement {
@@ -416,6 +434,10 @@ section {
     .yMovement,
     .xReverseMovement {
         transition: all 2s;
+    }
+
+    .xMovementForLastCar{
+        transition:  all 4s;
     }
 }
 
@@ -532,4 +554,9 @@ section {
         font-size: 1rem;
     }
 }
+
+
+
+
+
 

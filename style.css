@@ -422,14 +422,29 @@ section {
 .yAxisShow {
     opacity: 1;
     filter: blur(0);
-    transform: translateY(-30%);
+    transform: translateY(0);
 }
 
 /* Y axis movement */
 
+/* Y axis movement yMovementForMainLogo */
+.yMovementForMainLogo {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-100%);
+}
+
+.yMovementForMainLogoShow {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(-30%);
+}
+
+/* Y axis movement yMovementForMainLogo */
+
 /* Media Query */
 @media (prefers-reduced-motion: no-preference) {
-
+    .yMovementForMainLogo,
     .xMovement,
     .yMovement,
     .xReverseMovement {

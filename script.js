@@ -53,6 +53,17 @@ const xMovementForLastCarObserver = new IntersectionObserver((entries)=>{
     })
 })
 
+const yMovementForMainLogoObserver = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('yMovementForMainLogoShow')
+        }else{
+            entry.target.classList.remove('yMovementForMainLogoShow')
+        }
+    })
+})
+
 
 
 const xAxisMovingElement = document.querySelectorAll('.xMovement')
@@ -78,4 +89,9 @@ midTileElement.forEach((el)=>{
 const xMovementForLastCar = document.querySelectorAll('.xMovementForLastCar')
 xMovementForLastCar.forEach((el)=>{
     xMovementForLastCarObserver.observe(el)
+})
+
+const yMovementForMainLogo = document.querySelectorAll('.yMovementForMainLogo')
+yMovementForMainLogo.forEach((el)=>{
+    yMovementForMainLogoObserver.observe(el)
 })

@@ -443,6 +443,37 @@ section {
 
 /* Movement */
 
+/* Last section start */
+.last-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.last-section-car {
+    position: relative;
+    z-index: 2;
+}
+
+.last-section-under {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.last-section-head{
+    font-family: 'Porsche911Condensed',sans-serif;
+}
+
+/* Last section end */
+
 /* For mobile screens (max-width: 767px) */
 @media (max-width: 767px) {
     .main-logo {
@@ -451,6 +482,18 @@ section {
 
     .main-title {
         font-size: 1.3rem;
+    }
+
+    .last-section-logo {
+        width: 30%;
+    }
+
+    .last-section-head{
+        font-size: 2.5rem;
+    }
+
+    .last-section-car{
+        width: 100%;
     }
 
     h2{
@@ -484,6 +527,18 @@ section {
         font-size: 1.5rem;
     }
 
+    .last-section-logo {
+        width: 30%;
+    }
+
+    .last-section-head{
+        font-size: 3rem;
+    }
+
+    .last-section-car{
+        width: 60%;
+    }
+
     h2{
         font-size: 1.9rem;
     }
@@ -511,6 +566,18 @@ section {
         font-size: 2rem;
     }
 
+    .last-section-logo {
+        width: 30%;
+    }
+
+    .last-section-head{
+        font-size: 3.5rem;
+    }
+
+    .last-section-car{
+        width: 60%;
+    }
+
     h2{
         font-size: 2.2rem;
     }
@@ -533,9 +600,21 @@ section {
     .main-logo {
         width: 20%;
     }
-
+    
     .main-title {
         font-size: 2.5rem;
+    }
+    
+    .last-section-logo {
+        width: 20%;
+    }
+
+    .last-section-head{
+        font-size: 4rem;
+    }
+
+    .last-section-car{
+        width: 60%;
     }
 
     h2{

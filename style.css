@@ -114,6 +114,16 @@ body {
     font-weight: bold;
     letter-spacing: 5px;
 }
+
+.section-head{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.bn40 , .btn-43{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
 /* Text font end */
 
 /* Section Styling */
@@ -193,6 +203,42 @@ section {
     font-family: 'roboto-light', sans-serif;
 }
 
+.model-card img {
+    transition: transform 1s ease-in-out; 
+}
+
+.model-card:hover img {
+    transform: scale(1.1); 
+}
+
+
+.bn40 {
+    position: relative;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: large;
+    padding: 4px 6px;
+    color: #2b2b2b !important;
+    text-decoration: none;
+}
+
+.bn40::after {
+    position: absolute;  
+    left: 0; 
+    width: 100%; 
+    height: 2px;
+    display: block;
+    content: "";
+    background: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
+    opacity: 1;
+    margin-bottom: -6px;
+    margin-top: 1px;
+}
+  
+.bn40div {
+    display: flex;
+}
+
 /* Second section end */
 
 /* Third section start*/
@@ -223,6 +269,47 @@ section {
 .third-h4{
     font-family: 'roboto-thin', sans-serif;
 }
+
+.btn41-43 {
+    padding: 10px 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    background: transparent;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .btn-43 {
+    border: 2px solid rgb(255, 255, 255);
+    z-index: 1;
+    color: white;
+  }
+  
+  .btn-43:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-43:hover {
+    color: rgb(0, 0, 0);
+  }
+  
+  .btn-43:hover:after {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+  }
 
 @media (min-width: 992px){
     .Third::before {
@@ -314,7 +401,7 @@ section {
     }
 
     h2{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     h3 {
@@ -329,7 +416,7 @@ section {
         font-size: 0.7rem;
     }
 
-    .second-section-second-title{
+    .section-head{
         text-align: center;
     }
 }
@@ -345,7 +432,7 @@ section {
     }
 
     h2{
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
     h3 {

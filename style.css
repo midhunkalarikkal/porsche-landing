@@ -176,8 +176,7 @@ section {
 .first-section {
     position: relative;
     width: 100%;
-    height: 100dvh; /* Adjust height as needed */
-    background-image: url('https://www.wsupercars.com/wallpapers-regular/Porsche/2025-Porsche-911-Targa-4-GTS-002-1080.jpg');
+    height: 100dvh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -193,17 +192,15 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black shade with opacity */
+    background-color: rgba(0, 0, 0, 0.5); 
     z-index: 1;
 }
 
 .main-logo {
     position: relative;
-    z-index: 2; /* Ensure the logo is above the background and the black shade */
-    max-width: 300px; /* Adjust size as needed */
+    z-index: 2; 
+    max-width: 300px; 
 }
-
-
 /* First section wnd */
 
 /* Second section start */
@@ -279,7 +276,6 @@ section {
 .bn40div {
     display: flex;
 }
-
 /* Second section end */
 
 /* Third section start*/
@@ -370,6 +366,66 @@ section {
         position: relative; 
         z-index: 2; 
     }
+}
+
+.Third-two {
+    display: flex;
+    position: relative;
+}
+
+.left-text{
+    font-family: '.roboto-bold';
+}
+
+.left-box {
+    position: relative;
+    height: 600px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.left-text {
+    transform: rotate(-90deg);  
+    white-space: nowrap; 
+    font-weight: bold; 
+    color: #333; 
+    font-family: fantasy;
+    letter-spacing: 10px;
+    margin-right: 10rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.right-box {
+    position: absolute;
+    right: 10%; 
+    top: 30%; 
+    transform: translateY(-50%); 
+}
+
+.bottom-box {
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgba(254, 254, 254, 0.777); 
+    backdrop-filter: blur(1px); 
+    padding: 15px;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    overflow: hidden;
+    white-space: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.right-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 /* Third section end*/
 
@@ -682,60 +738,26 @@ footer {
         text-align: center;
     }
 
-    .left-box {
-        position: relative;
-        height: 600px;
-        border-radius: 10px;
-        padding: 20px;
+    .first-section {
+        background-image: url('https://www.wsupercars.com/wallpapers-phone/Porsche/2025-Porsche-Panamera-Turbo-S-E-Hybrid-001-2800p.jpg');
     }
-    
-    .left-text {
-        transform: rotate(-90deg);  
-        white-space: nowrap; 
+
+    .left-box {
+        height: 600px;
+    }
+
+    .left-text{
         font-size: 3rem; 
-        font-weight: bold; 
-        color: #333; 
-        font-family: fantasy;
-        letter-spacing: 10px;
-        margin-right: 10rem;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
     
     .right-box {
-        position: absolute;
-        right: 10%; 
-        top: 30%; 
-        transform: translateY(-50%); 
         height: 400px;
     }
     
     .bottom-box {
-        position: absolute;
         right: 10%; 
         bottom: 5%;
-        border-radius: 10px;
-        background-color: rgba(254, 254, 254, 0.777); 
-        backdrop-filter: blur(1px); 
-        padding: 15px;
         width: calc(90% - 20px);
-    }
-    
-    .description {
-        font-size: 16px;
-        color: #555;
-        overflow: hidden;
-        white-space: normal;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 15px;
-    }
-    
-    .right-box img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
     }
 }
 
@@ -777,60 +799,26 @@ footer {
         font-size: 0.8rem;
     }
 
-    .left-box {
-        position: relative;
-        height: 600px;
-        border-radius: 10px;
-        padding: 20px;
+    .first-section {
+        background-image: url('https://www.wsupercars.com/wallpapers-phone/Porsche/2025-Porsche-Panamera-Turbo-S-E-Hybrid-001-2800p.jpg');
     }
-    
-    .left-text {
-        transform: rotate(-90deg);  
-        white-space: nowrap; 
-        font-size: 3rem; 
-        font-weight: bold; 
-        color: #333; 
-        font-family: fantasy;
-        letter-spacing: 10px;
-        margin-right: 10rem;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    .left-box {
+        height: 600px;
+    }
+
+    .left-text{
+        font-size: 4rem; 
     }
     
     .right-box {
-        position: absolute;
-        right: 10%; 
-        top: 30%; 
-        transform: translateY(-50%); 
         height: 400px;
     }
     
     .bottom-box {
-        position: absolute;
         right: 10%; 
         bottom: 5%;
-        border-radius: 10px;
-        background-color: rgba(254, 254, 254, 0.777); 
-        backdrop-filter: blur(1px); 
-        padding: 15px;
         width: calc(90% - 20px);
-    }
-    
-    .description {
-        font-size: 16px;
-        color: #555;
-        overflow: hidden;
-        white-space: normal;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 15px;
-    }
-    
-    .right-box img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
     }
 }
 
@@ -872,63 +860,26 @@ footer {
         font-size: 0.9rem;
     }
 
-    .left-box {
-        position: relative;
-        height: 800px;
-        border-radius: 10px;
-        padding: 20px;
+    .first-section {
+        background-image: url('https://www.wsupercars.com/wallpapers-regular/Porsche/2025-Porsche-911-Targa-4-GTS-002-1080.jpg');
     }
-    
-    .left-text {
-        transform: rotate(-90deg);  
-        white-space: nowrap; 
+
+    .left-box {
+        height: 800px;
+    }
+
+    .left-text{
         font-size: 5rem; 
-        font-weight: bold; 
-        color: #333; 
-        font-family: fantasy;
-        letter-spacing: 10px;
-        margin-right: 10rem;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
     
     .right-box {
-        position: absolute;
-        right: 10%; 
-        top: 50%; 
-        transform: translateY(-50%); 
         height: 600px;
-        border-radius: 10px;
-        background-color: rgba(252, 252, 252, 0.415);
-        backdrop-filter: blur(1px);
     }
     
     .bottom-box {
-        position: absolute;
         right: 5%; 
         bottom: 10%;
-        border-radius: 10px;
-        background-color: rgba(254, 254, 254, 0.777); 
-        backdrop-filter: blur(1px); 
-        padding: 15px;
         width: calc(30% - 20px);
-    }
-    
-    .description {
-        font-size: 16px;
-        color: #555;
-        overflow: hidden;
-        white-space: normal;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 15px;
-    }
-    
-    .right-box img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
     }
 }
 
@@ -970,74 +921,26 @@ footer {
         font-size: 1rem;
     }
 
-    .left-box {
-        position: relative;
-        height: 800px;
-        border-radius: 10px;
-        padding: 20px;
+    .first-section {
+        background-image: url('https://www.wsupercars.com/wallpapers-regular/Porsche/2025-Porsche-911-Targa-4-GTS-002-1080.jpg');
     }
-    
-    .left-text {
-        transform: rotate(-90deg);  
-        white-space: nowrap; 
-        font-size: 5rem; 
-        font-weight: bold; 
-        color: #333; 
-        font-family: fantasy;
-        letter-spacing: 10px;
-        margin-right: 10rem;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    .left-box {
+        height: 800px;
+    }
+
+    .left-text{
+        font-size: 6rem; 
     }
     
     .right-box {
-        position: absolute;
-        right: 10%; 
         top: 50%; 
-        transform: translateY(-50%); 
         height: 600px;
-        border-radius: 10px;
-        background-color: rgba(252, 252, 252, 0.415);
-        backdrop-filter: blur(1px);
     }
     
     .bottom-box {
-        position: absolute;
         right: 5%; 
         bottom: 10%;
-        border-radius: 10px;
-        background-color: rgba(254, 254, 254, 0.777); 
-        backdrop-filter: blur(1px); 
-        padding: 15px;
         width: calc(30% - 20px);
     }
-    
-    .description {
-        font-size: 16px;
-        color: #555;
-        overflow: hidden;
-        white-space: normal;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 15px;
-    }
-    
-    .right-box img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-}
-
-
-
-
-.Third-two {
-    display: flex;
-    position: relative;
-}
-
-.left-text{
-    font-family: '.roboto-bold';
 }

@@ -64,25 +64,36 @@ const yMovementForMainLogoObserver = new IntersectionObserver((entries)=>{
     })
 })
 
+const yReverseMovementObserver = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('yReverseMovementShow')
+        }else{
+            entry.target.classList.remove('yReverseMovementShow')
+        }
+    })
+})
 
 
-const xAxisMovingElement = document.querySelectorAll('.xMovement')
-xAxisMovingElement.forEach((el)=>{
+
+const xAxisMovingElements = document.querySelectorAll('.xMovement')
+xAxisMovingElements.forEach((el)=>{
     xObserver.observe(el)
 })
 
-const yAxisMovingElement = document.querySelectorAll('.yMovement')
-yAxisMovingElement.forEach((el)=>{
+const yAxisMovingElements = document.querySelectorAll('.yMovement')
+yAxisMovingElements.forEach((el)=>{
     yObserver.observe(el)
 })
 
-const xAxisReverseMovingElement = document.querySelectorAll('.xReverseMovement')
-xAxisReverseMovingElement.forEach((el)=>{
+const xAxisReverseMovingElements = document.querySelectorAll('.xReverseMovement')
+xAxisReverseMovingElements.forEach((el)=>{
     xReverseObserver.observe(el)
 })
 
-const midTileElement = document.querySelectorAll('.mid-tile')
-midTileElement.forEach((el)=>{
+const midTileElements = document.querySelectorAll('.mid-tile')
+midTileElements.forEach((el)=>{
     midTileObserver.observe(el)
 })
 
@@ -94,4 +105,9 @@ xMovementForLastCar.forEach((el)=>{
 const yMovementForMainLogo = document.querySelectorAll('.yMovementForMainLogo')
 yMovementForMainLogo.forEach((el)=>{
     yMovementForMainLogoObserver.observe(el)
+})
+
+const yReverseMovementElements = document.querySelectorAll('.yReverseMovement')
+yReverseMovementElements.forEach((el)=>{
+    yReverseMovementObserver.observe(el)
 })

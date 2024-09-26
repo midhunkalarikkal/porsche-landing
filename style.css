@@ -2,81 +2,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 
-.roboto-thin {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-}
-
-.roboto-light {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-}
-
-.roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-}
-
-.roboto-medium {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-}
-
-.roboto-bold {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-}
-
-.roboto-black {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-}
-
-.audiowide-regular {
-    font-family: "Audiowide", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 /* Porsche font */
 @font-face {
     font-family: 'Porsche911Regular';
-    src: url('/fonts/911v2.ttf') format('truetype');
+    src: url('fonts/911v2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Porsche911Bold';
-    src: url('/fonts/911v2b.ttf') format('truetype');
+    src: url('fonts/911v2b.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Porsche911Condensed';
-    src: url('/fonts/911v2c.ttf') format('truetype');
+    src: url('fonts/911v2c.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Porsche911Italic';
-    src: url('/fonts/911v2i.ttf') format('truetype');
+    src: url('fonts/911v2i.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Porsche911Light';
-    src: url('/fonts/911v2l.ttf') format('truetype');
+    src: url('fonts/911v2l.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Porsche911LightItalic';
-    src: url('/fonts/911v2li.ttf') format('truetype');
+    src: url('fonts/911v2li.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
 }

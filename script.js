@@ -1,113 +1,41 @@
-const xObserver = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        console.log(entry)
-        if(entry.isIntersecting){
-            entry.target.classList.add('xAxisShow')
-        }else{
-            entry.target.classList.remove('xAxisShow')
-        }
-    })
-})
+// Common function to handle intersection observer setup
+function createObserver(classToAdd) {
+    return new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add(classToAdd);
+            } else {
+                entry.target.classList.remove(classToAdd);
+            }
+        });
+    });
+}
 
-const yObserver = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        console.log(entry)
-        if(entry.isIntersecting){
-            entry.target.classList.add('yAxisShow')
-        }else{
-            entry.target.classList.remove('yAxisShow')
-        }
-    })
-})
+// Observers with corresponding classes
+const observers = {
+    xObserver: createObserver('xAxisShow'),
+    yObserver: createObserver('yAxisShow'),
+    xReverseObserver: createObserver('xAxisReverseShow'),
+    midTileObserver: createObserver('mid-tileshow'),
+    xMovementForLastCarObserver: createObserver('xMovementForLastCarShow'),
+    yMovementForMainLogoObserver: createObserver('yMovementForMainLogoShow'),
+    yReverseMovementObserver: createObserver('yReverseMovementShow')
+};
 
-const xReverseObserver = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        console.log(entry)
-        if(entry.isIntersecting){
-            entry.target.classList.add('xAxisReverseShow')
-        }else{
-            entry.target.classList.remove('xAxisReverseShow')
-        }
-    })
-})
+// Mapping of elements and their corresponding observer
+const elementObserverMap = [
+    { selector: '.xMovement', observer: observers.xObserver },
+    { selector: '.yMovement', observer: observers.yObserver },
+    { selector: '.xReverseMovement', observer: observers.xReverseObserver },
+    { selector: '.mid-tile', observer: observers.midTileObserver },
+    { selector: '.xMovementForLastCar', observer: observers.xMovementForLastCarObserver },
+    { selector: '.yMovementForMainLogo', observer: observers.yMovementForMainLogoObserver },
+    { selector: '.yReverseMovement', observer: observers.yReverseMovementObserver }
+];
 
-const midTileObserver = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        console.log(entry)
-        if(entry.isIntersecting){
-            entry.target.classList.add('mid-tileshow')
-        }else{
-            entry.target.classList.remove('mid-tileshow')
-        }
-    })
-})
-
-const xMovementForLastCarObserver = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        console.log(entry)
-        if(entry.isIntersecting){
-            entry.target.classList.add('xMovementForLastCarShow')
-        }else{
-            entry.target.classList.remove('xMovementForLastCarShow')
-        }
-    })
-})
-
-const yMovementForMainLogoObserver = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        console.log(entry)
-        if(entry.isIntersecting){
-            entry.target.classList.add('yMovementForMainLogoShow')
-        }else{
-            entry.target.classList.remove('yMovementForMainLogoShow')
-        }
-    })
-})
-
-const yReverseMovementObserver = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        console.log(entry)
-        if(entry.isIntersecting){
-            entry.target.classList.add('yReverseMovementShow')
-        }else{
-            entry.target.classList.remove('yReverseMovementShow')
-        }
-    })
-})
-
-
-
-const xAxisMovingElements = document.querySelectorAll('.xMovement')
-xAxisMovingElements.forEach((el)=>{
-    xObserver.observe(el)
-})
-
-const yAxisMovingElements = document.querySelectorAll('.yMovement')
-yAxisMovingElements.forEach((el)=>{
-    yObserver.observe(el)
-})
-
-const xAxisReverseMovingElements = document.querySelectorAll('.xReverseMovement')
-xAxisReverseMovingElements.forEach((el)=>{
-    xReverseObserver.observe(el)
-})
-
-const midTileElements = document.querySelectorAll('.mid-tile')
-midTileElements.forEach((el)=>{
-    midTileObserver.observe(el)
-})
-
-const xMovementForLastCar = document.querySelectorAll('.xMovementForLastCar')
-xMovementForLastCar.forEach((el)=>{
-    xMovementForLastCarObserver.observe(el)
-})
-
-const yMovementForMainLogo = document.querySelectorAll('.yMovementForMainLogo')
-yMovementForMainLogo.forEach((el)=>{
-    yMovementForMainLogoObserver.observe(el)
-})
-
-const yReverseMovementElements = document.querySelectorAll('.yReverseMovement')
-yReverseMovementElements.forEach((el)=>{
-    yReverseMovementObserver.observe(el)
-})
+// Attach observers to corresponding elements
+elementObserverMap.forEach(({ selector, observer }) => {
+    document.querySelectorAll(selector).forEach((el) => {
+        observer.observe(el);
+    });
+});
